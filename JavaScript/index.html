@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="all">
+    <h1 id="header">Hello Oliver</h1>
+    <button onclick="toggleText()">Text Change</button>
+
+    <button onclick="change()">Change color</button>
+    
+    <button onclick="bgchange()">Change Background</button>
+
+    <input type="text" id="name">
+    <button onclick="add()">Add Name</button>
+    <ol id="li"></ol>
+
+    <h2 onmouseover="changeover()" onmouseout="changeout()" id="data">MouseOver to change the text color</h2>
+
+    <script>
+        function toggleText() {
+            var msg = document.getElementById("header");
+            //    if(msg.innerHTML === "Hello Oliver"){
+            //       msg.innerHTML= "Welcome to FreeFire" ;
+            //    }
+            //    else {
+            //        msg.innerHTML= "Hello Oliver" ;
+            //    }
+
+            msg.innerHTML = msg.innerHTML === "Hello Oliver" ? "Welcome to FreeFire" : "Hello Oliver";  //using terinary operator
+        }
+
+        function change() {
+            document.getElementById("header").style.color = "purple";
+            document.getElementById("header").style.fontSize = "50px";
+        }
+        function bgchange() {
+            document.getElementById("all").style.backgroundColor = "lightblue";
+        }
+        function changeover() {
+            document.getElementById("data").style.color = "red";
+        }
+        function changeout() {
+            document.getElementById("data").style.color = "green";
+        }
+
+        function add() {
+            let name = document.getElementById("name").value;
+            let l = document.createElement("li")
+            l.innerHTML = name;
+            document.getElementById("li").appendChild(l);
+        }
+    </script>
+</body>
+
+</html>

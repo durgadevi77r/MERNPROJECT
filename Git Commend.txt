@@ -1,0 +1,136 @@
+PS D:\MERN> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=durgadevir0906@gmail.com
+user.name=Durga Devi
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+(END)
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=durgadevir0906@gmail.com
+user.name=Durga Devi
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+(END)
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=durgadevir0906@gmail.com
+user.name=Durga Devi
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+PS D:\MERN> git config --global user.name "DurgaDevi"
+PS D:\MERN> git config --global user.email "durgadevir0906@gmail.com"
+PS D:\MERN> git init
+Initialized empty Git repository in D:/MERN/.git/
+PS D:\MERN> git add index.html
+PS D:\MERN> git commit -m "File Commit"   
+[master (root-commit) 4a227c2] File Commit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+PS D:\MERN> git branch -M main
+PS D:\MERN> git branch        
+>>
+* main
+PS D:\MERN> git remote add origin https://github.com/durgadevi77r/MERNPROJECT.git 
+PS D:\MERN> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 362.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/durgadevi77r/MERNPROJECT.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS D:\MERN> git add .
+PS D:\MERN> git commit -m "Index Modified"
+[main fdc32bc] Index Modified
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 space
+PS D:\MERN> git push 
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 360 bytes | 180.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/durgadevi77r/MERNPROJECT.git
+   4a227c2..fdc32bc  main -> main
+PS D:\MERN> git checkout -b durga
+Switched to a new branch 'durga'
+PS D:\MERN> git branch
+* durga
+  main
+PS D:\MERN> git add .
+PS D:\MERN> git commit -m "New message added"
+[durga 16a4522] New message added
+ 1 file changed, 1 insertion(+)
+PS D:\MERN> git push
+fatal: The current branch durga has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin durga
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\MERN> git branch -M durga
+PS D:\MERN> git push
+fatal: The current branch durga has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin durga
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS D:\MERN> git push -u origin durga
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'durga' on GitHub by visiting:
+remote:      https://github.com/durgadevi77r/MERNPROJECT/pull/new/durga
+remote:
+To https://github.com/durgadevi77r/MERNPROJECT.git
+ * [new branch]      durga -> durga
+branch 'durga' set up to track 'origin/durga'.
+PS D:\MERN> git pull origin durga
+From https://github.com/durgadevi77r/MERNPROJECT
+ * branch            durga      -> FETCH_HEAD
+Already up to date.
+PS D:\MERN> git push
+Everything up-to-date
+PS D:\MERN> 
