@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, black, rgb(230, 54, 54));
+}
+
+.navbar {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    list-style: none;
+    border-radius: 5px;
+    margin: 10px 30px;
+    color: aliceblue;
+}
+
+
+.link:hover {
+    background: linear-gradient(60deg, black, gray);
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+}
