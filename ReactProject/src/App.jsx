@@ -11,6 +11,9 @@ import Navbar from './Componenet/Navbar.jsx'
 import State from './Hooks/State.jsx'
 import Hooks from './Pages/Hooks.jsx'
 import Effect from './Hooks/Effect.jsx'
+import Ref from './Hooks/Ref.jsx'
+import Reducer from './Hooks/Reducer.jsx'
+import Context from './Hooks/Context.jsx'
 
 const App = () => {
 
@@ -28,7 +31,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/home' element={<Home items={array} user={login} />} />
-        <Route path='/about' element={<About />}/>
+        <Route path='/about' element={<About items={array} user={login} />}/>
         <Route path='/counter' element={<Counter />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/skills' element={<Skills />}/>
@@ -37,6 +40,9 @@ const App = () => {
         <Route path='/hooks' element={<Hooks />}/>
         <Route path='/state' element={<State />}/>
         <Route path='/effect' element={<Effect />}/>
+        <Route path='/ref' element={<Ref />}/>
+        <Route path='/reducer' element={<Reducer />}/>
+        <Route path='/context' element={<Context/>}/>
       </Routes>
 
     </div>
