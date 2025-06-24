@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getRoute, postRoute, putRoute, deleteRoute } = require('../controller/egController');
+const { getRoute, postRoute, putRoute, deleteRoute,getRouteById } = require('../controller/egController');
 
 /*router.get('/get' ,(req,res) => {
     res.send('Get route is working');
@@ -20,6 +20,7 @@ router.delete('/delete',(req,res) => {
 
 
 router.get('/get', getRoute)
+router.get('/get/:id', getRouteById)
 router.post('/post', postRoute)
 router.put('/put/:id', putRoute)
 router.delete('/delete/:id', deleteRoute)

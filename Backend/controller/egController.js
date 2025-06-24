@@ -1,10 +1,15 @@
 const user = require('../models/userModels');
 
-
 exports.getRoute = async (req,res) => {
     const userData = await user.find();
     res.status(201).json({data:userData})
 }
+
+exports.getRouteById = async (req,res)=>{
+    const userData = await user.findById(req.params.id);
+    res.status(201).json({userData})
+}
+
 exports.postRoute = async (req,res) => {
     const {username,password} = req.body;
     const exist = await user.findOne({username,password});
