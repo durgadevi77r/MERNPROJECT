@@ -1,8 +1,7 @@
 const todo = require('../models/todoModels');
 exports.getTodo = async (req, res) => {
     const response = await todo.find();
-    res.status(201).json( response );
-    res.send('Get route working');
+    res.status(201).json(response);
 }
 
 exports.getTodoById = async (req, res) => {
