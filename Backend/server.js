@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 
 const router = require('./routes/egRouters');      
-const todorouter = require('./routes/todoRouters'); 
+const todoRoute = require('./routes/todoRouters'); 
 const connectDB = require('./config/db');
 
 dotenv.config();
@@ -18,7 +18,7 @@ connectDB();
 
 // API routes
 app.use(router);           
-app.use('/todo', todorouter);     
+app.use('/todo', todoRoute);     
 
 // Start server
 const PORT = process.env.PORT;
