@@ -1,21 +1,27 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
+
 const router = require('./routes/egRouters');      
 const todorouter = require('./routes/todoRouters'); 
 const connectDB = require('./config/db');
 
-const app = express();
 dotenv.config();
+const app = express();
 
-const PORT = process.env.PORT || 7000;
-
-connectDB();
-
+// Middleware
+app.use(cors());
 app.use(express.json());
 
-app.use(router);       
-app.use('/todo', todorouter);
+// Connect to MongoDB
+connectDB();
 
+// API routes
+app.use(router);           
+app.use('/todo', todorouter);     
+
+// Start server
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`✅ Server running at http://localhost:${PORT}`);
 });

@@ -14,6 +14,8 @@ import Effect from './Hooks/Effect.jsx'
 import Ref from './Hooks/Ref.jsx'
 import Reducer from './Hooks/Reducer.jsx'
 import Context from './Hooks/Context.jsx'
+import Todo from './Pages/Todo.jsx'
+
 
 const App = () => {
 
@@ -43,6 +45,7 @@ const App = () => {
         <Route path='/ref' element={<Ref />}/>
         <Route path='/reducer' element={<Reducer />}/>
         <Route path='/context' element={<Context/>}/>
+        <Route path='/todo' element={<Todo/>}/>
       </Routes>
 
     </div>
